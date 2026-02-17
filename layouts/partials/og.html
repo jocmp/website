@@ -13,11 +13,11 @@
   content="{{ with .Title }}article{{ else }}website{{ end }}"
 />
 <meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:image" content="{{ .Site.Params.ogimage }}" />
-
-{{ with .Params.images }} {{ range first 6 . }}
+{{ with .Params.images }}{{ range first 1 . }}
 <meta property="og:image" content="{{ . | absURL }}" />
-{{ end }} {{ end }} {{ with .Params.audio }}
+{{ end }}{{ else }}
+<meta property="og:image" content="{{ $.Site.Params.ogimage }}" />
+{{ end }} {{ with .Params.audio }}
 <meta property="og:audio" content="{{ . }}" />
 {{ end }} {{ with .Params.videos }} {{ range first 1 . }}
 <meta property="og:video" content="{{ . | absURL }}" />
