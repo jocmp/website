@@ -14,7 +14,15 @@
 />
 <meta property="og:url" content="{{ .Permalink }}" />
 {{ with .Params.images }}{{ range first 1 . }}
+{{- $img := resources.Get (strings.TrimPrefix "/" .) -}}
+{{- if $img -}}
+  {{- $resized := $img.Resize "1200x" -}}
+<meta property="og:image" content="{{ $resized.Permalink }}" />
+<meta property="og:image:width" content="{{ $resized.Width }}" />
+<meta property="og:image:height" content="{{ $resized.Height }}" />
+{{- else -}}
 <meta property="og:image" content="{{ . | absURL }}" />
+{{- end -}}
 {{ end }}{{ else }}
 <meta property="og:image" content="{{ $.Site.Params.ogimage }}" />
 {{ end }} {{ with .Params.audio }}
