@@ -12,7 +12,7 @@ guid: http://jocmp.micro.blog/2026/02/16/capy-log-share-sheet-updates/
 ---
 [Version 2026.02.1194](https://github.com/jocmp/capyreader/releases/tag/2026.02.1194) includes a few new changes around the built-in Android share sheet.  The first is a new layout. Feed discovery starts when the dialog opens instead of opening up to the app. This saves on taps and reduces the number of distinct screens, too. For Feedbin users, the share sheet will also display a "Save" tab which will [save to Pages](https://feedbin.com/blog/2025/10/01/newsletter-extension/) just like the official browser extension.
 
-{{< figure src="/uploads/2026/subscribe.png" alt="Auto-generated description: Two smartphone screens showing different app interfaces with options for saving or subscribing to pages." caption="Subscribe and Save for Feedbin (left) and the new Subscribe modal, available for all other account types" >}}
+{{< figure src="/uploads/2026/subscribe.png" alt="Auto-generated description: Two smartphone screens showing different app interfaces with options for saving or subscribing to pages." caption="Subscribe and Save for Feedbin (left) and the new Subscribe modal (right) available for all other account types" >}}
 
 ### Other changes
 There are a few small tweaks around Miniflux. I’ve added support for Miniflux’s "Save" feature within articles. This will appear if an integration is set up on the Miniflux account such as Instapaper or Readeck.
