@@ -1,0 +1,41 @@
+title = "jocmp"
+baseURL = "https://jocmp.com/"
+languageCode = "en"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+[pagination]
+  pagerSize = 10
+pluralizeListTitles = false
+rssLimit = 25
+
+[params]
+  description = ""
+  about_me = "Web dev with a heart for mobile apps. Currently building Capy Reader."
+  ogimage = "https://micro.blog/jocmp/avatar.jpg"
+  github_username = "https://github.com/jocmp"
+
+[params.author]
+  name = "Josiah Campbell"
+  avatar = "https://avatars.micro.blog/avatars/2025/27/52207.jpg"
+
+[taxonomies]
+  category = "categories"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[mediaTypes."application/json"]
+  suffixes = ["json"]
+
+[outputFormats.RSS]
+  baseName = "feed"
+
+[outputFormats.JSON]
+  baseName = "feed"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]

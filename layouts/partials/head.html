@@ -1,0 +1,27 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {{ .Title }}{{ if ne .Title .Site.Title }} // {{ .Site.Title }}{{ end }}
+    </title>
+
+    {{ partial "meta.html" . }}
+    {{ partial "og.html" . }}
+
+    {{ with .OutputFormats.Get "RSS" -}}
+    <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+    {{- end }}
+    <link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="{{ "feed.json" | absURL }}" />
+
+    {{ with .Site.Params.github_username }}
+    <link rel="me" href="{{ . }}" />
+    {{ end }}
+
+    <link rel="preload" href="{{ "css/fonts/et-book-roman-line-figures.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ "css/fonts/et-book-display-italic-old-style-figures.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ "css/fonts/et-book-bold-line-figures.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ "css/fonts/et-book-roman-old-style-figures.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+
+    <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
+    <link rel="stylesheet" type="text/css" href="{{ "custom.css" | relURL }}" />
+  </head>

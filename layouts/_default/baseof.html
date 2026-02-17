@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+	{{ partial "head.html" . }}
+	<body>
+		<div class="container">
+			{{ partial "header.html" . }}
+			{{ block "main" . }}{{ end }}
+			{{ partial "footer.html" . }}
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/hls.js"></script>
+		<script src="/js/studio.js"></script>
+	</body>
+</html>
