@@ -11,6 +11,6 @@ I build software for people who want useful tools in the real world.
 
 I live in Chicago and work as a software developer. In my spare time I [enjoy tinkering](https://github.com/jocmp) with mobile apps of various shapes and sizes.
 
-Give me a shout [on Mastodon](https://mastodon.social/@_jocmp) or email me at <a href="mailto:hello@jocmp.com">hello@jocmp.com</a>.
+Give me a shout <a rel="me" href="https://mastodon.social/@_jocmp">on Mastodon</a> or email me at <a href="mailto:hello@jocmp.com">hello@jocmp.com</a>.
 
 ![](/uploads/2025/sketchy.webp)

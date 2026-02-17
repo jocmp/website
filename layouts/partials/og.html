@@ -24,7 +24,7 @@
 <meta property="og:image" content="{{ . | absURL }}" />
 {{- end -}}
 {{ end }}{{ else }}
-<meta property="og:image" content="{{ $.Site.Params.ogimage }}" />
+<meta property="og:image" content="{{ $.Site.Params.ogimage | absURL }}" />
 {{ end }} {{ with .Params.audio }}
 <meta property="og:audio" content="{{ . }}" />
 {{ end }} {{ with .Params.videos }} {{ range first 1 . }}

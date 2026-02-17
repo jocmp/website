@@ -17,6 +17,11 @@
     {{ with .Site.Params.github_username }}
     <link rel="me" href="{{ . }}" />
     {{ end }}
+    {{ with .Site.Params.mastodon_username }}
+    <link rel="me" href="{{ . }}" />
+    {{- $url := urls.Parse . -}}
+    <meta name="fediverse:creator" content="{{ path.Base $url.Path }}@{{ $url.Host }}" />
+    {{ end }}
 
     <link rel="preload" href="{{ "css/fonts/et-book-roman-line-figures.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ "css/fonts/et-book-display-italic-old-style-figures.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>

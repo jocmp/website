@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+missing=()
+for mp4 in $(find static/uploads -name "*.mp4"); do
+  webm="${mp4%.mp4}.webm"
+  jpg="${mp4%.mp4}.jpg"
+  [ ! -f "$webm" ] && missing+=("$webm")
+  [ ! -f "$jpg" ] && missing+=("$jpg")
+done
+
+if [ ${#missing[@]} -gt 0 ]; then
+  echo "Missing files. Run make first:"
+  printf "  %s\n" "${missing[@]}"
+  exit 1
+fi
