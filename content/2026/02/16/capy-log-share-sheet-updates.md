@@ -21,7 +21,7 @@ There are a few small tweaks around Miniflux. I’ve added support for Miniflux�
 
 Lastly, there’s now better tablet support via drag handles. A drag handle is the tall pill shape between the feed and the reader view. The drag handle can be pressed and dragged to show more list content, or more reader content. It can be dragged all the way to the end which will then open articles in full screen mode for subsequent articles.
 
-<video src="https://cdn.uploads.micro.mov/238475/2026/drag-handles/playlist.m3u8" poster="/uploads/2026/frames/1682301-0-01f919.jpg" width="540" controls="controls" preload="metadata"></video>
+{{< video src="/uploads/2026/drag-handles.mp4" poster="/uploads/2026/frames/1682301-0-01f919.jpg" width="540" >}}
 
 ### Bugs, squashed
 - Fix infinite loop in Miniflux entry sync. Previously Miniflux accounts would silently keep fetching beyond the limit. ([PR #1814](https://github.com/jocmp/capyreader/pull/1814))

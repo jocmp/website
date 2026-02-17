@@ -29,7 +29,7 @@ This second expectation prevents a direct call to an `ACTION_VIEW` intent since 
 
 Putting it all together, the new "open in browser" feature in Capy does what it says on the tin:
 
-<video controls="controls" playsinline="playsinline" src="/uploads/2025/demo.mp4" poster="/uploads/2025/poster.png" preload="none"></video>
+{{< video src="/uploads/2025/demo.mp4" poster="/uploads/2025/poster.png" >}}
 
 ## Feed Selection UI Improvements
 
@@ -41,7 +41,7 @@ One outstanding problem in Capy Reader has been feed list transitions. To spot t
 
 Here's an example of the problem at 4x speed. The top bar state jank is noticeable at the 10 second mark when it still appears as the changed color when the list has already switched to the next feed.
 
-<video src="/uploads/2025/before.mp4" poster="/uploads/2025/650a7c3a16.png" controls="controls" preload="metadata"></video>
+{{< video src="/uploads/2025/before.mp4" poster="/uploads/2025/650a7c3a16.png" >}}
 
 The solution I found was to [rebuild the article pager](https://github.com/jocmp/capyreader/pull/1354/commits/1431818cbc8717816273bc427770127ea76e8458) in the view layer. This in turn invalidates the list state which simultaneously invalidates the scrollbar state.
 
@@ -71,7 +71,7 @@ The last wrinkle with this approach is pager updates in response to in-feed acti
 
 Here's a demo putting it all together:
 
-<video src="/uploads/2025/after.mp4" poster="/uploads/2025/726aff4e1c.png" controls="controls" preload="metadata"></video>
+{{< video src="/uploads/2025/after.mp4" poster="/uploads/2025/726aff4e1c.png" >}}
 
 Something so subtle that you might not have even noticed, but your brain did.
 

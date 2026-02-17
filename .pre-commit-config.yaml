@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: check-webm
+        name: Check webm files exist for all mp4s
+        entry: bash -c 'missing=(); for mp4 in $(find static/uploads -name "*.mp4"); do webm="${mp4%.mp4}.webm"; [ ! -f "$webm" ] && missing+=("$webm"); done; if [ ${#missing[@]} -gt 0 ]; then echo "Missing webm files. Run make webm first:"; printf "  %s\n" "${missing[@]}"; exit 1; fi'
+        language: system
+        always_run: true
+        pass_filenames: false

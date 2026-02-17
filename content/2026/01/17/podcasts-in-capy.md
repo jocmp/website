@@ -19,4 +19,4 @@ Happy listening!
 
 These are opt-in under Settings > General > Audio player. Demo below.
 
-<video controls="controls" playsinline="playsinline" preload="metadata" width="1440" height="1080" poster="/uploads/2026/frames/1661997-0-fe4e0e.jpg" src="https://cdn.uploads.micro.mov/238475/2026/site-podcast-demo/playlist.m3u8"></video>
+{{< video src="/uploads/2026/site-podcast-demo.mp4" poster="/uploads/2026/frames/1661997-0-fe4e0e.jpg" width="1440" height="1080" >}}
