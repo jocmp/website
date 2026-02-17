@@ -1,0 +1,212 @@
+{
+  "main": {
+    "id": "53079d83a0c4eed7",
+    "type": "split",
+    "children": [
+      {
+        "id": "f9432642ab713f39",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a7595ce58ef46ae9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/2026/02/16/my-cool-post.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "my-cool-post"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "cd57b46f54ec54a0",
+    "type": "split",
+    "children": [
+      {
+        "id": "cee4da1cf0026f29",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1b1ec1f995928e6c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "2710880bfb89a1ef",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "49b8a994346193d6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c52b980aba83fc01",
+    "type": "split",
+    "children": [
+      {
+        "id": "04369f3ad67b4ea9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3f3110741180f739",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/2026/02/16/my-cool-post.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for my-cool-post"
+            }
+          },
+          {
+            "id": "0918a0eee2ccf8eb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "content/2026/02/16/my-cool-post.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from my-cool-post"
+            }
+          },
+          {
+            "id": "71f61eea6248c43b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "88700d3591be761c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "65454678f8f92d6b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/2026/02/16/my-cool-post.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of my-cool-post"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "a7595ce58ef46ae9",
+  "lastOpenFiles": [
+    "public/uploads/test_hu_3dc5469c0d663313.png",
+    "resources/_gen/images/uploads/test_hu_3dc5469c0d663313.png",
+    "public/uploads/test_hu_4dcd673f69b2e907.png",
+    "resources/_gen/images/uploads/test_hu_4dcd673f69b2e907.png",
+    "content/2026/02/08/simple-unread-badges.md",
+    "script/check-uploads",
+    "content/2026/02/16/my-cool-post.md",
+    "public/uploads/test.png",
+    "static/uploads/test.png",
+    "public/uploads/Screenshot_20260215_175812.png",
+    "content/2026/02/16/capy-log-share-sheet-updates.md",
+    "content/2026/01/19/mercury-parser.md",
+    "public/page/2/index.html",
+    "public/page/2",
+    "public/2026/02/16/my-cool-post/index.html",
+    "public/2026/02/16/my-cool-post",
+    "script/new-post",
+    "script",
+    "content/capyreader.md",
+    "new-post",
+    "archetypes/post.md",
+    "archetypes",
+    "content/photos.md"
+  ]
+}

@@ -31,10 +31,10 @@ Readability.js and Postlight Parser may very well represent the past of full con
 
 The following is a brief and non-exhaustive comparison between v2.2.3 of Postlight Parser and v0.6.4 of Defuddle using a small node.js application ([source code on GitHub](https://github.com/jocmp/parser-comparison)). Defuddle seems to work best when the site's markup is already well formatted which is the case with The Verge. In the [following review article](https://www.theverge.com/24324299/asus-rog-zephyrus-g16-2024-gaming-laptop-review-amd-strix-point), Defuddle picks up more images, headers, and content like the overall review score than Postlight Parser.
 
-<img src="/uploads/2025/parser-compare-verge.png" width="600" height="449" alt="">
+![](/uploads/2025/parser-compare-verge.png)
 
 Parsing fails if you throw [an article from Yahoo News Singapore](https://sg.news.yahoo.com/mcdonald-pore-launches-chilli-crab-064000706.html) at either Defuddle or Postlight Parser. Defuddle has a slight edge in that it at least extracts images and article content but still captures garbage text like "ADVERTISEMENT." 
 
-<img src="/uploads/2025/parser-compare-yn-sg.png" width="600" height="449" alt="">
+![](/uploads/2025/parser-compare-yn-sg.png)
 
 In short, better base markup still results in a better outcome. Defuddle is clearly the project to watch given Postlight Parser's lack of updates, and it's backed by a live project with Obsidian. Full content parsers come and go but the need to tame the chaos of the web is never ending.

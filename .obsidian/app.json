@@ -1,0 +1,9 @@
+{
+  "propertiesInDocument": "source",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "content",
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "static/uploads",
+  "alwaysUpdateLinks": true
+}

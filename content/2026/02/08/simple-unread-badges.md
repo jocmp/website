@@ -12,7 +12,7 @@ guid: http://jocmp.micro.blog/2026/02/08/simple-unread-badges/
 ---
 Nearly ten years ago, I switched from an iPhone to a Pixel 2 (though I'd used Nexus devices for years before this). This was right around the same time [Android Oreo](https://android-developers.googleblog.com/2017/08/introducing-android-8-oreo.html?m=1) was released with notification dots. Initially, I was annoyed by the lack of exact numbers, having grown used to the nagging red dots on iOS that told you exactly how many new notifications were associated with any given app. I even tried to work around this at first with different launchers, but eventually I came around to the idea of the simple badges. Either there were new notifications or not.
 
-<img src="/uploads/2026/badges-open-2x.png" width="300" height="312" alt="Auto-generated description: A smartphone screen displays messaging notifications and various app icons on a pink background.">
+![Auto-generated description: A smartphone screen displays messaging notifications and various app icons on a pink background.](/uploads/2026/badges-open-2x.png)
 
 Terry Godier recently articulated the notion of [phantom obligation](https://www.terrygodier.com/phantom-obligation) where a UI implies a debt of you where there is none. Most RSS readers, Capy Reader included, follow the three-paned UI layout popularized in part by NetNewsWire, with exact notification counts and all. It’s possible to rework this, but I believe Capy Reader still owes some familiarity to users who use sync services that follow this paradigm, such as Feedbin or FreshRSS. That said, there are tweaks around the edges that can reduce this phantom obligation.
 
@@ -20,4 +20,4 @@ That’s why I’ve added the option to use "Simple" unread badges in [Capy Read
 
 Let me know how this works out for you on [Mastodon](https://mastodon.social/@_jocmp) or [GitHub discussions](https://github.com/jocmp/capyreader/discussions/categories/q-a). As with all new features in Capy Reader, the goal is to focus on content, not the software around it. The less time you have to spend managing feeds, the more time you can spend on reading itself.
 
-<img src="/uploads/2026/simple-badges.jpg" alt="Simple Badges in Capy Reader">
+![Simple Badges in Capy Reader](/uploads/2026/simple-badges.jpg)

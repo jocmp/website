@@ -24,6 +24,18 @@ rssLimit = 25
 [markup.goldmark.renderer]
   unsafe = true
 
+[[module.mounts]]
+  source = "assets"
+  target = "assets"
+
+[[module.mounts]]
+  source = "static/uploads"
+  target = "assets/uploads"
+
+[[module.mounts]]
+  source = "static"
+  target = "static"
+
 [mediaTypes."application/json"]
   suffixes = ["json"]
 

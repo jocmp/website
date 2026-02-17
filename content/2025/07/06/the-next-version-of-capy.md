@@ -15,4 +15,4 @@ The next version of Capy Reader will reintroduce the "Mark All Read" button to t
 
 The floating action button will still be an option, but I want to free up space for more complex UIs, specifically audio playback which will occupy the same bottom bar area.
 
-<img src="/uploads/2025/mark-as-read.png" width="600" height="450" alt="">
+![](/uploads/2025/mark-as-read.png)

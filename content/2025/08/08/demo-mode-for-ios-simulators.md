@@ -23,4 +23,4 @@ xcrun simctl status_bar booted override --time "9:41" --dataNetwork "wifi" --wif
 
 The end result looks like this.
 
-<img src="/uploads/2025/demo-mode.png">
+![](/uploads/2025/demo-mode.png)

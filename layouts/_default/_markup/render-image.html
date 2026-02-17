@@ -1,0 +1,25 @@
+{{- $src := .Destination -}}
+{{- $alt := .Text -}}
+{{- $img := resources.Get (strings.TrimPrefix "/" $src) -}}
+{{- if $img -}}
+  {{- $widths := slice 480 800 -}}
+  {{- $srcset := slice -}}
+  {{- range $w := $widths -}}
+    {{- if lt $w $img.Width -}}
+      {{- $resized := $img.Resize (printf "%dx" $w) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink $w) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $srcset = $srcset | append (printf "%s %dw" $img.RelPermalink $img.Width) -}}
+  <img
+    src="{{ $img.RelPermalink }}"
+    {{- if gt (len $srcset) 1 }}
+    srcset="{{ delimit $srcset ", " }}"
+    sizes="(max-width: 800px) 100vw, 800px"
+    {{- end }}
+    alt="{{ $alt }}"
+    loading="lazy"
+  >
+{{- else -}}
+  <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy">
+{{- end -}}

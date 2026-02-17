@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require "date"
+
+title = ARGV.join(" ")
+if title.empty?
+  $stderr.puts "Usage: ./new-post <title>"
+  exit 1
+end
+
+slug = title.downcase.gsub(/[^a-z0-9]+/, "-").gsub(/^-|-$/, "")
+today = Date.today
+path = "content/#{today.strftime("%Y/%m/%d")}/#{slug}.md"
+
+exec("hugo", "new", "--kind", "post", path)

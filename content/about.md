@@ -13,4 +13,4 @@ I live in Chicago and work as a software developer. In my spare time I [enjoy ti
 
 Give me a shout [on Mastodon](https://mastodon.social/@_jocmp) or email me at <a href="mailto:hello@jocmp.com">hello@jocmp.com</a>.
 
-<img src="/uploads/2025/sketchy.webp" width="400px"/>
+![](/uploads/2025/sketchy.webp)

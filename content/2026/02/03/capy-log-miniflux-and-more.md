@@ -28,7 +28,7 @@ To get started, select "Miniflux" on the account screen and enter your username 
 
 If you’re signed in to Google Reader API, just sign out in Settings > Account > Log Out, and then select Miniflux on the account screen. Note that API Keys are not yet supported, but I’m open to feedback on this, especially if you know of any other apps that have this feature already.
 
-<img src="/uploads/2026/add-account.png" width="300" height="635" alt="Auto-generated description: A smartphone screen displays an Add Account menu with options to connect to RSS services like Local, Feedbin, FreshRSS, Miniflux, and Reader.">
+![Auto-generated description: A smartphone screen displays an Add Account menu with options to connect to RSS services like Local, Feedbin, FreshRSS, Miniflux, and Reader.](/uploads/2026/add-account.png)
 
 ## Other Tweaks
 
@@ -36,6 +36,6 @@ I’ve enabled the audio player by default in the latest version. The audio play
 
 If you enjoy these updates consider leaving a tip [on Ko-fi](https://ko-fi.com/capyreader) or sharing the app with others! As ever, thanks for using Capy Reader.
 
-<img src="/uploads/2026/labels.png" width="300" height="635" alt="Auto-generated description: A smartphone screen displays an RSS feed app interface with sections for unread articles, categories, and labeled feeds.">
+![Auto-generated description: A smartphone screen displays an RSS feed app interface with sections for unread articles, categories, and labeled feeds.](/uploads/2026/labels.png)
 
-<img src="/uploads/2026/block-quotes.png" width="300" height="635" alt="Auto-generated description: A smartphone screen displays an article discussing upcoming features in GNOME 50, focusing on virtual monitor and remote desktop capabilities.">
+![Auto-generated description: A smartphone screen displays an article discussing upcoming features in GNOME 50, focusing on virtual monitor and remote desktop capabilities.](/uploads/2026/block-quotes.png)
