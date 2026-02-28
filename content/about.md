@@ -4,6 +4,7 @@ menu: main
 weight: 4
 date: 2026-02-03 21:40:41.000000000 -06:00
 url: "/about/"
+hide_date: true
 ---
 ## Josiah Campbell
 
