@@ -259,6 +259,16 @@ img {
   border-radius: 5px;
 }
 
+.e-content img {
+  max-width: 35rem;
+}
+
+@media screen and (max-width: 760px) {
+  .e-content img {
+    max-width: 90%;
+  }
+}
+
 video,
 audio {
   display: flex;

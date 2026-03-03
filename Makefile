@@ -6,8 +6,10 @@ POSTERS := $(MP4S:.mp4=.jpg)
 
 videos: $(WEBMS) $(POSTERS)
 
+BASE_URL ?= http://localhost:1313
+
 dev:
-	hugo server
+	hugo server --bind 0.0.0.0 --baseURL $(BASE_URL)
 
 %.webm: %.mp4
 	ffmpeg -i $< -c:v libvpx-vp9 -crf 30 -b:v 0 -an $@
