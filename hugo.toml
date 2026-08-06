@@ -1,16 +1,15 @@
-title = "jocmp"
+title = "Josiah Campbell"
 baseURL = "https://jocmp.com/"
 languageCode = "en"
 defaultContentLanguage = "en"
 enableRobotsTXT = true
-[pagination]
-  pagerSize = 10
-pluralizeListTitles = false
-rssLimit = 25
+disableKinds = ["taxonomy", "term", "rss"]
+
+[taxonomies]
 
 [params]
   description = ""
-  about_me = "Web dev with a heart for mobile apps. Currently building Capy Reader."
+  about_me = "Web dev with a heart for mobile apps."
   ogimage = "/avatar.jpg"
   github_username = "https://github.com/jocmp"
   mastodon_username = "https://mastodon.social/@_jocmp"
@@ -18,9 +17,6 @@ rssLimit = 25
 [params.author]
   name = "Josiah Campbell"
   avatar = "/avatar.jpg"
-
-[taxonomies]
-  category = "categories"
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -37,18 +33,7 @@ rssLimit = 25
   source = "static"
   target = "static"
 
-[mediaTypes."application/json"]
-  suffixes = ["json"]
-
-[outputFormats.RSS]
-  baseName = "feed"
-
-[outputFormats.JSON]
-  baseName = "feed"
-
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML"]
   page = ["HTML"]
   section = ["HTML"]
-  taxonomy = ["HTML", "RSS"]
-  term = ["HTML", "RSS"]

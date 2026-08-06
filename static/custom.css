@@ -46,3 +46,38 @@ figcaption {
 img {
   margin: 1em 0;
 }
+
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.about-photo {
+  flex: none;
+  order: -1;
+  align-self: flex-start;
+  max-width: 100%;
+}
+
+.about-photo img {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+@media screen and (min-width: 761px) {
+  .about {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+
+  .about-photo {
+    order: 0;
+  }
+}

@@ -1,0 +1,18 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $width := int (.Get "width" | default 180) -}}
+{{- $img := resources.Get (strings.TrimPrefix "/" $src) -}}
+{{- if $img -}}
+  {{- $small := $img.Resize (printf "%dx" $width) -}}
+  {{- $retina := $img.Resize (printf "%dx" (mul $width 2)) -}}
+  <img
+    src="{{ $small.RelPermalink }}"
+    srcset="{{ $small.RelPermalink }} 1x, {{ $retina.RelPermalink }} 2x"
+    width="{{ $small.Width }}"
+    height="{{ $small.Height }}"
+    alt="{{ $alt }}"
+    loading="lazy"
+  >
+{{- else -}}
+  <img src="{{ $src }}" width="{{ $width }}" alt="{{ $alt }}" loading="lazy">
+{{- end -}}

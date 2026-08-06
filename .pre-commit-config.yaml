@@ -1,9 +1,0 @@
-repos:
-  - repo: local
-    hooks:
-      - id: check-videos
-        name: Check webm and poster files exist for all mp4s
-        entry: script/check-videos
-        language: system
-        always_run: true
-        pass_filenames: false
