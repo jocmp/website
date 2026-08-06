@@ -1,5 +1,4 @@
 ---
-title: About
 date: 2026-02-03 21:40:41.000000000 -06:00
 aliases:
   - /about/
