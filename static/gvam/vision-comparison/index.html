@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8">
 <title>Vision search model comparison — GVSU Art Museum</title>
 <style>
-:root { --ink:#141414; --mute:#6b6b6b; --line:#dcdcdc; --accent:#1f6feb; --shade:#faf8f5; --cell:190px; --bg:#fff; }
+:root { --ink:#141414; --mute:#6b6b6b; --line:#dcdcdc; --accent:#1f6feb; --shade:#faf8f5; --cell:190px; --bg:#fff; --hot:#d62828; }
 * { box-sizing:border-box; }
 body { margin:0 auto; padding:28px 32px 60px; max-width:1180px; background:var(--bg); color:var(--ink);
   font:14px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
@@ -35,16 +35,16 @@ table.sum td.n { font-variant-numeric:tabular-nums; }
   gap:10px; align-items:start; }
 .hit { margin:0; position:relative; }
 .hit a { display:block; color:inherit; text-decoration:none; }
-.hit a:hover img { border-color:var(--accent); }
+.hit:not(.shared) a:hover img { border-color:var(--accent); }
 .hit a:hover .t { text-decoration:underline; }
 .hit a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
 .hit img { width:100%; aspect-ratio:1; object-fit:cover; border:1px solid var(--line); background:var(--shade); display:block;
   transition:transform .18s ease-in-out, box-shadow .18s ease-in-out, border-color .18s ease-in-out; }
-.hit.linked { z-index:4; }
-.hit.linked img { transform:scale(1.08); border-color:var(--accent); box-shadow:0 4px 14px rgba(0,0,0,.22); }
-.hit.linked figcaption { color:var(--ink); font-weight:700; }
 @media (prefers-reduced-motion: reduce) { .hit img { transition:none; } }
 .hit.shared img { border:3px solid var(--accent); box-shadow:0 0 0 1px var(--accent) inset; }
+.hit.linked { z-index:4; }
+.hit.linked img { transform:scale(1.08); box-shadow:0 0 0 1px var(--accent) inset, 0 4px 14px rgba(0,0,0,.22); }
+.hit.linked figcaption { color:var(--ink); font-weight:700; }
 figcaption { font-family:ui-sans-serif,system-ui,sans-serif; font-size:10.5px; line-height:1.35; margin-top:5px; color:var(--mute); }
 .rank { display:inline-block; min-width:14px; font-weight:700; color:var(--ink); }
 .oid { margin-left:3px; }
@@ -54,7 +54,7 @@ footer h3 { color:var(--ink); }
 footer li { margin-bottom:5px; }
 @media screen and (prefers-color-scheme: dark) {
   :root { --ink:#e6e3df; --mute:#9b9691; --line:#343a40; --accent:#58a6ff; --shade:#191d22; }
-  :root { --bg:#11141a; }
+  :root { --bg:#11141a; --hot:#ff7b72; }
   body { background:var(--bg); }
   .qimg, .hit img { background:#191d22; }
   .query { border-top-color:#5c6672; }
@@ -101,7 +101,9 @@ submitted to both services. Each returns the nearest visually similar results. N
 &ldquo;correct&rdquo; answer in the catalogue. So this is a measure of <i>how each model
 generalizes</i>, not on their accuracy.</p>
 <p><b>The finding.</b> The two models agree on only <b>1.7 of 10</b> results on average.
-They are not interchangeable: replacing one with the other materially changes what users see.
+They are not interchangeable. Replacing the model essentially swaps out all results.
+However, the new results may be more visually similar, as is the case with <i>The Great Wave</i>
+which returns more woodblock landscapes and fewer portraits.
 Results shared by both are outlined in <span style="color:var(--accent);font-weight:600">blue</span>.</p>
 </div>
 
