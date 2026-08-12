@@ -23,6 +23,6 @@
     <link rel="preload" href="{{ "css/fonts/et-book-bold-line-figures.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ "css/fonts/et-book-roman-old-style-figures.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
 
-    <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
-    <link rel="stylesheet" type="text/css" href="{{ "custom.css" | relURL }}" />
+    {{ $css := slice (resources.Get "css/style.css") (resources.Get "css/custom.css") | resources.Concat "css/style.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
   </head>
