@@ -1,6 +1,6 @@
 .PHONY: dev deploy
 
-SITE_URL ?= https://jocmp-website.jocmp64.workers.dev
+SITE_URL ?= https://jocmp.com
 
 dev:
 	npm run dev -- --host 0.0.0.0

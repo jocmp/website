@@ -6,6 +6,12 @@
 	"compatibility_flags": [
 		"nodejs_compat"
 	],
+	"routes": [
+		{
+			"pattern": "jocmp.com",
+			"custom_domain": true,
+		},
+	],
 	"d1_databases": [
 		{
 			"binding": "DB",
