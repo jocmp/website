@@ -1,0 +1,36 @@
+---
+interface MediaReference {
+	_ref: string;
+	url: string;
+}
+
+export interface Props {
+	node: {
+		_type: "video";
+		_key: string;
+		asset: MediaReference;
+		poster?: MediaReference;
+	};
+}
+
+const { node } = Astro.props;
+---
+
+<video
+	class="post-video"
+	src={node.asset.url}
+	poster={node.poster?.url}
+	controls
+	playsinline
+	preload="metadata"
+/>
+
+<style>
+	.post-video {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 1.5rem 0;
+		border-radius: var(--radius, 0);
+	}
+</style>

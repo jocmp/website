@@ -1,6 +1,9 @@
-.PHONY: dev
+.PHONY: dev deploy
 
-BASE_URL ?= http://localhost:1313
+SITE_URL ?= https://jocmp-website.jocmp64.workers.dev
 
 dev:
-	hugo server --bind 0.0.0.0 --baseURL $(BASE_URL)
+	npm run dev -- --host 0.0.0.0
+
+deploy:
+	EMDASH_SITE_URL=$(SITE_URL) npm run deploy
