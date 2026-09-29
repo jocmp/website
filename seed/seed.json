@@ -72,6 +72,11 @@
 					"searchable": true
 				},
 				{
+					"slug": "featured_image",
+					"label": "Featured Image",
+					"type": "image"
+				},
+				{
 					"slug": "content",
 					"label": "Content",
 					"type": "portableText",
@@ -122,11 +127,6 @@
 					"type": "custom",
 					"label": "Home",
 					"url": "/"
-				},
-				{
-					"type": "custom",
-					"label": "About",
-					"url": "/about/"
 				},
 				{
 					"type": "custom",
@@ -271,35 +271,112 @@
 	"content": {
 		"pages": [
 			{
-				"id": "about",
-				"slug": "about",
+				"id": "home",
+				"slug": "home",
 				"status": "published",
 				"data": {
-					"title": "About",
+					"title": "Home",
 					"content": [
 						{
 							"_type": "block",
+							"_key": "k1",
 							"style": "normal",
+							"markDefs": [],
 							"children": [
 								{
 									"_type": "span",
-									"text": "A place for writing about software, design, and the occasional stray thought. No posting schedule, no newsletter funnel. Just things I wanted to write down.",
-									"_key": "k1"
+									"_key": "k0",
+									"text": "I build software that puts stories, facts, and art in front of people like you.",
+									"marks": []
 								}
-							],
-							"_key": "k0"
+							]
 						},
 						{
 							"_type": "block",
+							"_key": "k6",
 							"style": "normal",
+							"markDefs": [
+								{
+									"_key": "k3",
+									"_type": "link",
+									"href": "https://github.com/jocmp"
+								}
+							],
 							"children": [
 								{
 									"_type": "span",
-									"text": "Built with Astro and EmDash. The source is open if you want to see how it works.",
-									"_key": "k3"
+									"_key": "k2",
+									"text": "I live in the midwest and work as a software engineer. In my spare time I ",
+									"marks": []
+								},
+								{
+									"_type": "span",
+									"_key": "k4",
+									"text": "enjoy tinkering",
+									"marks": [
+										"k3"
+									]
+								},
+								{
+									"_type": "span",
+									"_key": "k5",
+									"text": " with mobile apps of various shapes and sizes.",
+									"marks": []
+								}
+							]
+						},
+						{
+							"_type": "block",
+							"_key": "ke",
+							"style": "normal",
+							"markDefs": [
+								{
+									"_key": "k8",
+									"_type": "link",
+									"href": "https://mastodon.social/@_jocmp"
+								},
+								{
+									"_key": "kb",
+									"_type": "link",
+									"href": "mailto:hello@jocmp.com"
 								}
 							],
-							"_key": "k2"
+							"children": [
+								{
+									"_type": "span",
+									"_key": "k7",
+									"text": "Give me a shout ",
+									"marks": []
+								},
+								{
+									"_type": "span",
+									"_key": "k9",
+									"text": "on Mastodon",
+									"marks": [
+										"k8"
+									]
+								},
+								{
+									"_type": "span",
+									"_key": "ka",
+									"text": " or email me at ",
+									"marks": []
+								},
+								{
+									"_type": "span",
+									"_key": "kc",
+									"text": "hello@jocmp.com",
+									"marks": [
+										"kb"
+									]
+								},
+								{
+									"_type": "span",
+									"_key": "kd",
+									"text": ".",
+									"marks": []
+								}
+							]
 						}
 					]
 				}

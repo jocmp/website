@@ -43,6 +43,15 @@ npx emdash site import site.emdash --url https://<worker-url> --plan <digest> --
 
 `site import` only works on an empty site, so it is a one-time copy. After that, write posts on the remote admin, and use `make deploy` to push code changes tested locally.
 
+## Site setup
+
+`scripts/configure-site.mjs` sets the site title, creates the `home` page (text plus `scripts/sketchy.webp` as its `featured_image`), and removes the template's About page and menu item. It targets localhost by default:
+
+```sh
+node scripts/configure-site.mjs
+EMDASH_URL=https://<worker-url> EMDASH_TOKEN=<token> node scripts/configure-site.mjs
+```
+
 ## URLs
 
 Routes follow the Micro.blog site:
@@ -50,6 +59,7 @@ Routes follow the Micro.blog site:
 | Page | Route |
 |---|---|
 | Post | `/YYYY/MM/DD/slug/`, dated in America/Chicago |
+| Home | `/`, the `home` page |
 | Page | `/slug/` |
 | Tag | `/categories/slug/` |
 | All posts | `/archive/` |
