@@ -1,8 +1,10 @@
 import type { APIRoute } from "astro";
 import { getEmDashCollection, getSiteSettings } from "emdash";
 
+import { renderFeedHtml } from "../utils/feed-html";
 import { postPermalink } from "../utils/permalink";
 import { resolveBlogSiteIdentity } from "../utils/site-identity";
+import { summarize } from "../utils/text";
 
 export const GET: APIRoute = async ({ site, url }) => {
 	const siteUrl = site ?? new URL(url.origin);
@@ -10,7 +12,7 @@ export const GET: APIRoute = async ({ site, url }) => {
 
 	const { entries: posts } = await getEmDashCollection("posts", {
 		orderBy: { published_at: "desc" },
-		limit: 20,
+		limit: 25,
 	});
 
 	const items = posts
@@ -20,7 +22,8 @@ export const GET: APIRoute = async ({ site, url }) => {
 
 			const postUrl = new URL(postPermalink(post.id, post.data.publishedAt), siteUrl).href;
 			const title = escapeXml(post.data.title || "Untitled");
-			const description = escapeXml(post.data.excerpt || "");
+			const description = escapeXml(post.data.excerpt || summarize(post.data.content));
+			const content = wrapCdata(renderFeedHtml(post.data.content, siteUrl));
 
 			return `    <item>
       <title>${title}</title>
@@ -28,13 +31,14 @@ export const GET: APIRoute = async ({ site, url }) => {
       <guid isPermaLink="true">${postUrl}</guid>
       <pubDate>${pubDate}</pubDate>
       <description>${description}</description>
+      <content:encoded>${content}</content:encoded>
     </item>`;
 		})
 		.filter(Boolean)
 		.join("\n");
 
 	const rss = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>${escapeXml(siteTitle)}</title>
     <description>${escapeXml(siteTagline)}</description>
@@ -68,4 +72,8 @@ function escapeXml(str: string): string {
 		result = result.replace(pattern, replacement);
 	}
 	return result;
+}
+
+function wrapCdata(str: string): string {
+	return `<![CDATA[${str.replaceAll("]]>", "]]]]><![CDATA[>")}]]>`;
 }
