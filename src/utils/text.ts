@@ -31,10 +31,13 @@ export function extractText(blocks: PortableTextBlock[] | undefined): string {
 		.join(" ");
 }
 
-export function summarize(blocks: PortableTextBlock[] | undefined): string {
+export function summarize(
+	blocks: PortableTextBlock[] | undefined,
+	wordCount = SUMMARY_WORDS,
+): string {
 	const words = extractText(blocks).split(WHITESPACE_REGEX).filter(Boolean);
-	if (words.length <= SUMMARY_WORDS) {
+	if (words.length <= wordCount) {
 		return words.join(" ");
 	}
-	return `${words.slice(0, SUMMARY_WORDS).join(" ")}…`;
+	return `${words.slice(0, wordCount).join(" ")}…`;
 }

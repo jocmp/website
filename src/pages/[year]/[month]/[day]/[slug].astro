@@ -6,6 +6,8 @@ import Video from "../../../../components/Video.astro";
 import { resolveBlogSiteIdentity } from "../../../../utils/site-identity";
 import { postPermalink } from "../../../../utils/permalink";
 import { formatLongDate } from "../../../../utils/dates";
+import { summarize } from "../../../../utils/text";
+import { author } from "../../../../utils/author";
 
 const slug = decodeSlug(Astro.params.slug);
 
@@ -34,19 +36,21 @@ const seo = getSeoMeta(post, {
 	titleSeparator: " // ",
 });
 
+const description = seo.description || post.data.excerpt || summarize(post.data.content, 30);
 const tags = post.data.terms?.tag ?? [];
 ---
 
 <Base
 	title={seo.title}
 	pageTitle={seo.ogTitle}
-	description={seo.description}
+	description={description}
 	image={seo.ogImage}
 	canonical={seo.canonical}
 	robots={seo.robots}
 	type="article"
 	publishedTime={post.data.publishedAt?.toISOString() ?? null}
 	modifiedTime={post.data.updatedAt.toISOString()}
+	author={author.name}
 	content={{ collection: "posts", id: post.data.id, slug }}
 >
 	<div class="post h-entry">
@@ -60,7 +64,7 @@ const tags = post.data.terms?.tag ?? [];
 					)
 				}
 			</div>
-			<h2 class="p-name post-title" {...post.edit.title}>{post.data.title}</h2>
+			<h1 class="p-name post-title" {...post.edit.title}>{post.data.title}</h1>
 		</header>
 
 		<article class="post-content e-content with-title">

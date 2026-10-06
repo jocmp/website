@@ -6,3 +6,11 @@
 .post-header {
   margin-top: 2.5rem;
 }
+
+h1.post-title {
+  font-style: italic;
+  margin-top: 2.1rem;
+  margin-bottom: 1.4rem;
+  font-size: 2.2rem;
+  width: auto;
+}

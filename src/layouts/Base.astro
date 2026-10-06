@@ -3,6 +3,7 @@ import { getMenuWithCacheHint, getSiteSettingsWithCacheHint } from "emdash";
 import { EmDashHead, EmDashBodyStart, EmDashBodyEnd } from "emdash/ui";
 import { createPublicPageContext } from "emdash/page";
 import { resolveBlogSiteIdentity } from "../utils/site-identity";
+import { author as siteAuthor, authorJsonLd } from "../utils/author";
 import "../styles/style.css";
 import "../styles/custom.css";
 import "../styles/emdash.css";
@@ -61,12 +62,14 @@ const pageCtx = createPublicPageContext({
 	pageTitle: pageTitle ?? title,
 	description,
 	canonical,
-	image: image ?? new URL("/avatar.jpg", Astro.url.origin).href,
+	image: image ?? new URL(siteAuthor.avatarPath, Astro.url.origin).href,
 	content,
 	seo: { ogImage: image, robots },
 	articleMeta: { publishedTime, modifiedTime, author },
 	siteName: siteTitle,
 });
+
+const personJsonLd = JSON.stringify(authorJsonLd(Astro.url.origin));
 ---
 
 <!doctype html>
@@ -77,10 +80,10 @@ const pageCtx = createPublicPageContext({
 		<title>{fullTitle}</title>
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<link rel="alternate" type="application/rss+xml" title={siteTitle} href="/feed.xml" />
-		<link rel="me" href="https://github.com/jocmp" />
-		<link rel="me" href="https://mastodon.social/@_jocmp" />
-		<meta name="fediverse:creator" content="@_jocmp@mastodon.social" />
+		{siteAuthor.profiles.map((href) => <link rel="me" href={href} />)}
+		<meta name="fediverse:creator" content={siteAuthor.fediverseHandle} />
 		<EmDashHead page={pageCtx} />
+		<script type="application/ld+json" set:html={personJsonLd} />
 	</head>
 	<body>
 		<EmDashBodyStart page={pageCtx} />
@@ -107,7 +110,7 @@ const pageCtx = createPublicPageContext({
 			<footer id="footer">
 				<div class="outer">
 					<div id="footer-info" class="inner">
-						&copy; {new Date().getFullYear()} Josiah Campbell
+						&copy; {new Date().getFullYear()} {siteAuthor.name}
 					</div>
 				</div>
 			</footer>
