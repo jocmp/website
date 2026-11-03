@@ -4,7 +4,7 @@ updates:
     directory: /
     schedule:
       interval: weekly
-    # Mirror the minimumReleaseAge cooldown in pnpm-workspace.yaml.
+    # Wait a day before proposing fresh releases (EmDash exempt).
     cooldown:
       default-days: 1
       exclude:
@@ -15,6 +15,9 @@ updates:
         patterns:
           - emdash
           - "@emdash-cms/*"
+        update-types:
+          - minor
+          - patch
       minor-and-patch:
         update-types:
           - minor
@@ -24,6 +27,8 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 3
     groups:
       actions:
         patterns:
