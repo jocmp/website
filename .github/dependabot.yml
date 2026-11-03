@@ -1,0 +1,30 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    # Mirror the minimumReleaseAge cooldown in pnpm-workspace.yaml.
+    cooldown:
+      default-days: 1
+      exclude:
+        - emdash
+        - "@emdash-cms/*"
+    groups:
+      emdash:
+        patterns:
+          - emdash
+          - "@emdash-cms/*"
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns:
+          - "*"
