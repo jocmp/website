@@ -1,0 +1,35 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    # Wait a day before proposing fresh releases (EmDash exempt).
+    cooldown:
+      default-days: 1
+      exclude:
+        - emdash
+        - "@emdash-cms/*"
+    groups:
+      emdash:
+        patterns:
+          - emdash
+          - "@emdash-cms/*"
+        update-types:
+          - minor
+          - patch
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 3
+    groups:
+      actions:
+        patterns:
+          - "*"
